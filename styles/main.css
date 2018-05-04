@@ -45,35 +45,69 @@ nav ul li:nth-child(1) img{
     height: 50px;
     position: absolute;
 }
-.im1 div:nth-child(1),.im2 div:nth-child(1){
+
+
+
+.im{
     border: 1px  solid  black;
     margin-top: 200px;
     margin-left: 50px;
     position: relative;
     float: left;
-    transition: all 1s ease;
+    width: 280px;
+    height: 400px;
+}
+.im>div>img{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 280px;
+    height: 400px;
+}
+.im>div{
+    transition-delay: .3s;
+    transition-duration: 1s;
     transform: perspective(600px);
     transform-origin: 100% 50%;
     transform-style: preserve-3d;
     width: 280px;
     height: 400px;
 }
-.im1  div img,.im2 div img{
-    position: absolute;
-    backface-visibility: hidden;
+.im>div>div{
     width: 280px;
     height: 400px;
-}
-.im1 div:nth-child(1) div,.im2 div:nth-child(1) div{
-    background-color: #2E9AFE;
+    background-color: #AED6F1;
     position: absolute;
     backface-visibility: hidden;
     width: 280px;
     height: 400px;
     transform: rotateY(-180deg);
 }
-.im1:hover,.im2:hover{
-    transform: perspective(600px) rotateY(-180deg) translateX(100%);
+.im:hover>div{
+    transform: perspective(600px) rotateY(180deg) translateX(100%);
 }
-
-
+.im>div>div>h4{
+    text-align: center;
+    margin: 10px auto;
+}
+.im>div>div>p{
+    position: absolute;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 10px;
+    padding: 10px 30px 0px 30px;
+    text-align: justify;
+}
+.im>div>div>a{
+    background-color: #E74C3C;
+    border: 1px solid black;
+    border-radius: 10%;
+    width:100px;
+    height: 30px;
+    text-align: center;
+    margin-top: 280px;
+    margin-left: 100px;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
